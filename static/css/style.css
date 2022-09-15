@@ -1,0 +1,114 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 100px;
+  background-color: #eff1f4;
+}
+#logo {
+  display: flex;
+  gap: 20px;
+}
+#logo > img {
+  width: 80px;
+}
+#logo > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#social ul li {
+  width: 30px;
+  height: 30px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-color: transparent;
+}
+#social #facebook {
+  background-image: url("../icon/facebook.png");
+}
+#social #telegramm {
+  background-image: url("../icon/Telegram.png");
+}
+#social #instagram {
+  background-image: url("../icon/instagram.png");
+}
+#social #web-sayt {
+  background-image: url("../icon/web.png");
+}
+#social #youtube {
+  background-image: url("../icon/youtube.png");
+}
+/* body qismi */
+#sarlavha {
+  padding: 150px 100px;
+  text-align: center;
+  background-image: url("../images/white-and-bright-blue-squares.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#main {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  padding: 20px;
+  gap: 20px;
+}
+#jadval {
+  margin: 0;
+}
+#jadval #jadvaltop {
+  display: grid;
+  grid-template-columns: 10% 30% 30% 30%;
+  background-color: #030149;
+}
+#jadval #jadvaltop li {
+  color: white;
+  /* font-weight: 600; */
+}
+#jadval #malumot {
+  display: grid;
+  grid-template-columns: 10% 30% 30% 30%;
+  background-color: #eee;
+}
+#jadval #malumot:nth-child(odd) {
+  background-color: #fff;
+
+}
+#jadval #malumot li {
+  color: black;
+  /* font-weight: 600; */
+}
+#aside #axborotnoma ul,
+#aside #boglanish ul {
+  display: flex;
+  flex-direction: column;
+}
+#aside #axborotnoma ul li,
+#aside #boglanish ul li {
+  padding-left: 0;
+}
+
+/* footer qismi */
+#footer {
+  display: flex;
+  gap: 30px;
+  padding: 50px 100px;
+  background-color: #f8f9fa;
+}
+#footer ul {
+  display: flex;
+  flex-direction: column;
+}
+#footer ul h3,
+#footer ul li {
+  margin-top: 5px;
+  padding: 0;
+  text-align: left;
+}
+#reserved {
+  background-color: #eff1f4;
+  text-align: center;
+  padding: 15px 30px;
+}

@@ -1,0 +1,112 @@
+/* Media query */
+@media (max-width: 820px) {
+  #footer {
+    padding: 50px 25px;
+  }
+}
+/*Planshet*/
+@media (max-width: 868px) {
+  #main {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 20px;
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 50px;
+    background-color: #eff1f4;
+  }
+  #logo {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  #logo > img {
+    width: 50px;
+    height: 50px;
+  }
+  #logo > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #social ul li {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+  }
+  /* body qismi */
+  #sarlavha {
+    padding: 150px 50px;
+    text-align: center;
+    background-image: url(/images/white-and-bright-blue-squares.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* footer qismi */
+  #footer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 50px;
+    background-color: #f8f9fa;
+  }
+  #footer ul {
+    display: flex;
+    flex-direction: column;
+  }
+  #footer ul h3,
+  #footer ul li {
+    margin-top: 5px;
+    padding: 0;
+    text-align: left;
+  }
+  #reserved {
+    background-color: #eff1f4;
+    border: 1px solid #eff1f4;
+    text-align: center;
+    padding: 50px;
+  }
+}
+/*Mobile*/
+
+@media (max-width: 480px) {
+  nav {
+    padding: 25px 25px;
+  }
+  #logo > img {
+    width: 30px;
+    height: 30px;
+  }
+  #logo > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #logo > div > b {
+    font-size: 8px;
+    margin-top: 0;
+    padding: 0;
+  }
+  #social {
+    width: 30%;
+  }
+  #sarlavha {
+    padding: 100px 25px;
+  }
+  #sarlavha * {
+    font-size: 15px;
+  }
+  #footer {
+    padding: 50px 25px;
+  }
+}

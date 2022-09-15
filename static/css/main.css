@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  /*border: 10px solid red;*/
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Century Gothic", sans-serif;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  transition: all 0.25s;
+  user-select: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+:root {
+  --rang1: ;
+  --rang2: ;
+  --rang3: ;
+  --shrift1: ;
+  --shrift2: ;
+}
+
+body {
+  position: relative;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Arial", sans-serif;
+}
+
+a:link {
+  color: black;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: hotpink;
+}
+a:active {
+  color: blue;
+}
+li {
+  display: inline-block;
+  /* background-color: darksalmon; */
+  padding: 0.5em 1em;
+}

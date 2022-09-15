@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/main.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/style.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/mediaQuery.css')}}" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div id="logo">
+          <img src="{{url_for('static', filename = 'images/gerb.png')}}" alt="" />
+          <div>
+            <b>LABOR-MIGRATION</b>
+            <b>Дастурий мажмуаси</b>
+          </div>
+        </div>
+        <div id="social">
+          <ul>
+            <li id="facebook"><a href=""></a></li>
+            <li id="telegramm"><a href=""></a></li>
+            <li id="instagram"><a href=""></a></li>
+            <li id="web-sayt"><a href=""></a></li>
+            <li id="youtube"><a href=""></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div id="sarlavha">
+      <h1>Ахборотнома - Шартнома лойиҳаси берилган фуқаролар рўйхати</h1>
+      <h3>Шартнома лойиҳаси берилган фуқаролар рўйхати</h3>
+    </div>
+    <section id="main">
+      <div id="pagination">
+        <div id="jadval">
+          <ul id="jadvaltop">
+            <li>№</li>
+            <li>Ф.И.Ш</li>
+            <li>Туғилган сана (йил-ой-кун)</li>
+            <li>Шартнома берилган сана</li>
+          </ul>
+
+          {%for user in users.items%}
+          <ul id="malumot">
+            <li>{{user.id}}</li>
+            <li>{{user.name}}</li>
+            <li>{{user.birthday}}</li>
+            <li>{{user.date_registr}}</li>
+          </ul>
+          {%endfor%}
+<!-- pagination -->
+
+<nav aria-label="...">
+  <ul class="pagination">
+    {% if users.has_prev %}
+    <li class="page-item">
+      <a class="page-link" href="{{ url_for('index', page=users.prev_num) }}">Previous</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="{{ url_for('index', page=1) }}">1...</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="{{ url_for('index', page=users.prev_num) }}">{{users.prev_num}}</a></li>
+    {% else %}
+    <li class="page-item disabled">
+      <a class="page-link">Previous</a>
+    </li>
+    {%endif%}
+    
+    {% if users.has_next %}
+    <li class="page-item active" aria-current="page">
+      <a class="page-link" href="#">{{users.next_num-1}}</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="{{ url_for('index', page=users.next_num) }}">{{users.next_num}}</a></li>
+    {%endif%}
+
+    {% if users.has_next %}
+    <li class="page-item">
+      <a class="page-link" href="{{ url_for('index', page=41) }}">...41</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href="{{ url_for('index', page=users.next_num) }}">Next</a>
+    </li>
+    {%endif%}
+  </ul>
+</nav>
+
+
+
+
+
+<!-- pagination end -->
+</div>
+
+</div>
+<div id="aside">
+        <div id="axborotnoma">
+          <h3>АХБОРОТНОМА</h3>
+          <ul>
+            <li><a href="">Янгиликлар</a></li>
+            <li><a href="">Давлатлар қоида ва шароитлари</a></li>
+            <li><a href="">Меҳнат шартномаларини тузиш қоидалари</a></li>
+            <li><a href="">Хусусий бандлик агентликлари</a></li>
+            <li><a href="">Патентни расмийлаштириш</a></li>
+            <li><a href="">Барча ахборотлар</a></li>
+          </ul>
+        </div>
+        <div id="boglanish">
+          <h3>БОҒЛАНИШ</h3>
+          <ul>
+            <li>
+              Манзил: Ўзбекистон, Тошкент шаҳри Олмазор тумани Қамарнисо кўчаси
+              1 уй
+            </li>
+            <li>Тел: (71) 202-33-55</li>
+            <li>Email: <a href="">info@migration.uz</a></li>
+            <li>Душанба - Жума: 09:00 - 18:00</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div id="footer">
+        <div>
+          <h3>"labor-migration" дастурий мажмуаси</h3>
+          <p>
+            сайтида жойлаштирилган маълумотлардан нусха олиш (оммавий ахборот
+            воситаларида у ёки бу маълумотлардан ёки хабарлардан цитата
+            келтириш) ушбу маълумотнинг манбаси кўрсатилган ҳолда рухсат
+            этилади.
+          </p>
+        </div>
+        <ul>
+          <h3>АХБОРОТНОМА</h3>
+          <li><a href="">Янгиликлар</a></li>
+          <li><a href="">Давлатлар қоида ва шароитлари</a></li>
+          <li><a href="">Меҳнат шартномаларини тузиш қоидалари</a></li>
+          <li><a href="">Хусусий бандлик агентликлари</a></li>
+          <li><a href="">Патентни расмийлаштириш</a></li>
+          <li><a href="">Барча ахборотлар</a></li>
+        </ul>
+        <ul>
+          <h3>МАЪЛУМОТНОМА</h3>
+          <li><a href="">Ўқув йўналишлари реестри</a></li>
+          <li><a href="">Рўйхатга олинганлар</a></li>
+          <li><a href="">Хизматлар бўйича ҳисобот</a></li>
+          <li><a href="">Кўп учрайдиган саволлар</a></li>
+          <li><a href="">Работа в России онлайн таҳлили</a></li>
+          <li><a href="">Валюталар курси</a></li>
+          <li><a href="">Барча маълумотлар</a></li>
+        </ul>
+        <ul>
+          <h3>БОҒЛАНИШ</h3>
+          <li><a href="">Агентлик билан боғланиш</a></li>
+          <li><a href="">Ҳудудий филиаллар билан боғланиш</a></li>
+          <li><a href="">Ваколатхоналар билан боғланиш</a></li>
+        </ul>
+      </div>
+      <div id="reserved">
+        <p>
+          Version 3.0 | All rights reserved. All site materials are available
+          under license. Copyright © 2019-2022
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
